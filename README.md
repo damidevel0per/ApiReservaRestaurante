@@ -15,14 +15,29 @@
 * **API RESTful:** Diseño basado en principios REST para una interacción clara y predecible.
 * **Documentación Interactiva:** Integración con Swagger/OpenAPI para explorar y probar los endpoints fácilmente.
 
-## Tecnologías Utilizadas
-
-* **Backend:** ASP.NET Core (.NET 8.0 o posterior, si no especificado).
-* **Base de Datos:** MySQL.
-* **ORM/Acceso a Datos:** `MySql.Data` (ADO.NET directo).
-* **Envío de Correo:** `MailKit` y `MimeKit`.
-* **Documentación API:** Swagger / OpenAPI.
-
 ## Estructura del Proyecto
 
 El proyecto sigue una arquitectura modular y limpia:# ApiReservaRestaurante
+```
+ApiReservas/
+├── Controllers/              # Maneja las solicitudes HTTP y coordina la lógica de negocio.
+│   └── ReservasController.cs
+├── Data/                     # Lógica de acceso a datos (ej. MySqlDataAccess.cs).
+│   └── MySqlDataAccess.cs
+├── Models/                   # Clases que representan entidades de dominio y modelos de datos (Reserva.cs).
+│   ├── DTOs/                 # Data Transfer Objects para entrada/salida de la API (ej. CrearReservaDTO.cs).
+│   │   └── CrearReservaDTO.cs
+│   └── Reserva.cs
+├── Services/                 # Encapsula lógica de negocio y operaciones externas (ej. envío de emails).
+│   └── ServicioEmail.cs      # (También IServicioEmail.cs como interfaz)
+├── appsettings.json          # Configuración de la aplicación (cadenas de conexión, settings de email).
+├── Program.cs                # Punto de entrada y configuración de la aplicación (Inyección de Dependencias).
+└── ApiReservas.http          # Archivo para probar endpoints HTTP.
+```
+## Tecnologías Utilizadas
+
+* **Backend:** ASP.NET Core (.NET 8.0).
+* **Base de Datos:** MySQL.
+* **Acceso a Datos:** `MySql.Data` (ADO.NET directo).
+* **Envío de Correo:** `MailKit` y `MimeKit`.
+* **Documentación API:** Swagger / OpenAPI.
