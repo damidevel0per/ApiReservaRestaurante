@@ -1,0 +1,38 @@
+[
+  {
+    "ContainingType": "ApiReservas.Controllers.ReservasController",
+    "Method": "CrearReserva",
+    "RelativePath": "api/Reservas/CrearReserva",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "reservaDto",
+        "Type": "ApiReservas.Models.DTOs.CrearReservaDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApiReservas.Controllers.ReservasController",
+    "Method": "ListarReservasActuales",
+    "RelativePath": "api/Reservas/Hoy",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApiReservas.Controllers.ReservasController",
+    "Method": "ListarReservas",
+    "RelativePath": "api/Reservas/ListaDeReservas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]
